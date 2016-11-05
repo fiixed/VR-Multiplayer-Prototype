@@ -5,9 +5,7 @@ public class NManager : MonoBehaviour {
 
     public byte Version = 1;
 
-    /// <summary>if we don't want to connect in Start(), we have to "remember" if we called ConnectUsingSettings()</summary>
-    private bool ConnectInUpdate = true;
-
+    public GameObject headPrefab;
 
     public virtual void Start() {
          PhotonNetwork.ConnectUsingSettings(Version + "." + SceneManagerHelper.ActiveSceneBuildIndex);
@@ -41,5 +39,7 @@ public class NManager : MonoBehaviour {
 
     public void OnJoinedRoom() {
         Debug.Log("OnJoinedRoom() called by PUN. Now this client is in a room. From here on, your game would be running. For reference, all callbacks are listed in enum: PhotonNetworkingMessage");
+        //PhotonNetwork.Instantiate(headPrefab.name, )
     }
+
 }
