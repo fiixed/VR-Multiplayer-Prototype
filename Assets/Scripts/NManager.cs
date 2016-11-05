@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class NetworkManager : MonoBehaviour {
+public class NManager : MonoBehaviour {
 
     public byte Version = 1;
 
