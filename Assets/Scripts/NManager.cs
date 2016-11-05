@@ -6,6 +6,8 @@ public class NManager : MonoBehaviour {
     public byte Version = 1;
 
     public GameObject headPrefab;
+    public GameObject leftHandPrefab;
+    public GameObject rightHandPrefab;
 
     public virtual void Start() {
          PhotonNetwork.ConnectUsingSettings(Version + "." + SceneManagerHelper.ActiveSceneBuildIndex);
@@ -40,6 +42,9 @@ public class NManager : MonoBehaviour {
     public void OnJoinedRoom() {
         Debug.Log("OnJoinedRoom() called by PUN. Now this client is in a room. From here on, your game would be running. For reference, all callbacks are listed in enum: PhotonNetworkingMessage");
         PhotonNetwork.Instantiate(headPrefab.name, ViveManager.Instance.head.transform.position, ViveManager.Instance.head.transform.rotation, 0);
+        PhotonNetwork.Instantiate(leftHandPrefab.name, ViveManager.Instance.lefthand.transform.position, ViveManager.Instance.lefthand.transform.rotation, 0);
+        PhotonNetwork.Instantiate(rightHandPrefab.name, ViveManager.Instance.righthand.transform.position, ViveManager.Instance.righthand.transform.rotation, 0);
+
     }
 
 }
