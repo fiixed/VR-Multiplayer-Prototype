@@ -10,7 +10,8 @@ public class NManager : MonoBehaviour {
     public GameObject rightHandPrefab;
 
     public virtual void Start() {
-         PhotonNetwork.ConnectUsingSettings(Version + "." + SceneManagerHelper.ActiveSceneBuildIndex);
+        PhotonNetwork.ConnectUsingSettings(Version + "." + SceneManagerHelper.ActiveSceneBuildIndex);
+        var temp = PhotonVoiceNetwork.Client;  // to activate
         
     }
 
