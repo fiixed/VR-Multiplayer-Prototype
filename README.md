@@ -1,8 +1,8 @@
 # VR-Multiplayer-Prototype
 
-This is a VR multiplayer protoype for the HTC Vive using Proton Networking
+This is a VR multiplayer protoype for the HTC Vive using Photon Networking
 
-#Installation
+## Installation
 
 Clone the GitHub repository
 
